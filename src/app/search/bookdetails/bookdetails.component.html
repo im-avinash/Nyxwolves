@@ -1,27 +1,27 @@
 <div class="continer">
   <div class="row" *ngIf="bookdetails">
     <h2
-      class="badge bg-secondary fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
+      class="badge bg-info fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
       *ngIf="bookdetails.title"
     >
-      Book Title
+      Book Title : 
       {{ bookdetails.title }}
     </h2>
     <h4
-      class="badge bg-secondary fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
+      class="badge bg-info fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
       *ngIf="bookdetails.description"
     >
       {{ bookdetails.description }}
     </h4>
     <h3
-      class="badge bg-secondary fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
+      class="badge bg-info fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
       *ngIf="bookdetails.created"
     >
       First Book Date :
       {{ bookdetails.created }}
     </h3>
     <h3
-      class="badge bg-secondary fs-4 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
+      class="badge bg-info fs-4 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
       *ngIf="bookdetails.modified"
     >
       Last Modified Date :
