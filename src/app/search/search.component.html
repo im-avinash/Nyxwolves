@@ -1,0 +1,13 @@
+<p>search works!</p>
+<input
+  #search
+  (keyup.enter)="searchBooks(search.value)"
+  (blur)="searchBooks(search.value); search.value = ''"
+/>
+<button type="button" (click)="searchBooks(search.value)">Add</button>
+
+<ul>
+  <li *ngFor="let book of books">
+    {{ book[0] }}
+  </li>
+</ul>
