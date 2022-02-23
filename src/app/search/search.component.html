@@ -1,16 +1,33 @@
-<div>
-  <p>search works!</p>
-  <input
-    #search
-    (keyup.enter)="searchBooks(search.value)"
-    (blur)="searchBooks(search.value); search.value = ''"
-  />
-  <button type="button" (click)="searchBooks(search.value)">Add</button>
+<div class="container">
+  <div class="row">
+    <div
+      class="input-group mb-3 form-control bg-secondary border border-dark rounded-pill"
+    >
+      <input
+        class="form-control shadow-none border-0 rounded-pill"
+        #search
+        (keyup.enter)="searchBooks(search.value)"
+        placeholder="Search Books"
+        (blur)="searchBooks(search.value); search.value = ''"
+      />
+      <button
+        class="btn fa fa-search text-dark fs-3"
+        type="button"
+        (click)="searchBooks(search.value)"
+      ></button>
+    </div>
 
-  <ul>
-    <li *ngFor="let book of books" (click)="bookInfo(book[1])">
-      {{ book[0] }}
-    </li>
-  </ul>
-  <app-bookdetails [bookdetails]="bookDetails"></app-bookdetails>
+    <ul class="row">
+      <app-bookdetails [bookdetails]="bookDetails"></app-bookdetails>
+      <li
+        class="col-md-8"
+        class="badge bg-secondary fs-3 fw-bolder text-decoration-none text-dark d-block form-control rounded-pill border-dark border-4"
+        (click)="bookInfo(book[1])"
+        *ngFor="let book of books ;let indexOfelement=index;"
+
+      >
+        {{ indexOfelement +1}}        {{ book[0] }}
+      </li>
+    </ul>
+  </div>
 </div>
