@@ -10,4 +10,8 @@ export class BooksService {
     let searched = searchedBook.split(' ').join('+');
     return this.httpClient.get('api' + '/search.json?q=' + searched);
   }
+
+  public BookInfo(key: String) {
+    return this.httpClient.get('api' + key + '.json');
+  }
 }

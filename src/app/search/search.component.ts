@@ -9,6 +9,8 @@ import { BooksService } from '../books.service';
 export class SearchComponent implements OnInit {
   search: String = '';
   books: Array<Array<String>> = [];
+  key: String = '';
+  bookDetails = {};
 
   constructor(private booksService: BooksService) {}
 
@@ -19,6 +21,22 @@ export class SearchComponent implements OnInit {
         this.books.push([element.title, element.key]);
       });
       console.log(this.books);
+    });
+  }
+
+  bookInfo(key: String) {
+    // console.log(key);
+    this.booksService.BookInfo(key).subscribe((data: any) => {
+      data.docs.map((element: any) => {
+        this.books.push([element.title, element.key]);
+      });
+      this.bookDetails = {
+        title: data.title,
+        description: data.description,
+        created: data.created,
+        modified: data.last_modified,
+      };
+      console.log(this.bookDetails);
     });
   }
 }
