@@ -1,1 +1,6 @@
-<p>bookdetails works!</p>
+<div *ngIf="bookdetails">
+  <h2>{{ bookdetails.title }}</h2>
+  <h4>{{ bookdetails.description }}</h4>
+  <h3>{{ bookdetails.created }}</h3>
+  <h3>{{ bookdetails.modified }}</h3>
+</div>

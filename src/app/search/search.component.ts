@@ -29,8 +29,8 @@ export class SearchComponent implements OnInit {
       this.bookDetails = {
         title: data.title,
         description: data.description,
-        created: data.created,
-        modified: data.last_modified,
+        created: data.created.value,
+        modified: data.last_modified.value,
       };
       console.log(this.bookDetails);
     });
