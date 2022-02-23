@@ -20,16 +20,12 @@ export class SearchComponent implements OnInit {
       data.docs.map((element: any) => {
         this.books.push([element.title, element.key]);
       });
-      console.log(this.books);
     });
   }
 
   bookInfo(key: String) {
     // console.log(key);
     this.booksService.BookInfo(key).subscribe((data: any) => {
-      data.docs.map((element: any) => {
-        this.books.push([element.title, element.key]);
-      });
       this.bookDetails = {
         title: data.title,
         description: data.description,
