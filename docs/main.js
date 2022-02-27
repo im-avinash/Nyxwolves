@@ -27,7 +27,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    apiUrl: "http://localhost:4200",
+    apiUrl: "https://openlibrary.org",
 };
 /*
  * For easier debugging in development mode, you can import the following file
@@ -51,7 +51,7 @@ const environment = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "BooksService", function() { return BooksService; });
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/environments/environment */ "AytR");
+/* harmony import */ var src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/environments/environment.prod */ "cxbk");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "fXoL");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "tk/3");
 
@@ -63,7 +63,7 @@ class BooksService {
     }
     Books(searchedBook) {
         let searched = searchedBook.split(' ').join('+');
-        return this.httpClient.get(src_environments_environment__WEBPACK_IMPORTED_MODULE_0__["environment"].apiUrl + '/search.json?q=' + searched);
+        return this.httpClient.get(src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_0__["environment"].apiUrl + '/search.json?q=' + searched);
     }
     BookInfo(key) {
         return this.httpClient.get('api' + key + '.json');
@@ -136,6 +136,24 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵdefineInjector
         _search_search_component__WEBPACK_IMPORTED_MODULE_3__["SearchComponent"],
         _search_bookdetails_bookdetails_component__WEBPACK_IMPORTED_MODULE_4__["BookdetailsComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_0__["HttpClientModule"]] }); })();
+
+
+/***/ }),
+
+/***/ "cxbk":
+/*!**********************************************!*\
+  !*** ./src/environments/environment.prod.ts ***!
+  \**********************************************/
+/*! exports provided: environment */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+const environment = {
+    production: true,
+    apiUrl: "https://openlibrary.org",
+};
 
 
 /***/ }),

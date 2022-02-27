@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +13,6 @@ export class BooksService {
   }
 
   public BookInfo(key: String) {
-    return this.httpClient.get('api' + key + '.json');
+    return this.httpClient.get(environment.apiUrl + key + '.json');
   }
 }
