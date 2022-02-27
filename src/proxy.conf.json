@@ -6,5 +6,6 @@
       "^/api": ""
     },
     "changeOrigin": true
-  }
+  },
+  "logLevel": "debug"
 }
