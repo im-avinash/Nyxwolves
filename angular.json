@@ -69,7 +69,8 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "nyxWolves:build:production"
+              "browserTarget": "nyxWolves:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             }
           }
         },
