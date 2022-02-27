@@ -13,6 +13,6 @@ export class BooksService {
   }
 
   public BookInfo(key: String) {
-    return this.httpClient.get('api' + key + '.json');
+    return this.httpClient.get(environment.apiUrl + key + '.json');
   }
 }
