@@ -66,7 +66,7 @@ class BooksService {
         return this.httpClient.get(src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_0__["environment"].apiUrl + '/search.json?q=' + searched);
     }
     BookInfo(key) {
-        return this.httpClient.get(src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_0__["environment"].apiUrl + '/' + key + '.json');
+        return this.httpClient.get(src_environments_environment_prod__WEBPACK_IMPORTED_MODULE_0__["environment"].apiUrl + key + '.json');
     }
 }
 BooksService.ɵfac = function BooksService_Factory(t) { return new (t || BooksService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
